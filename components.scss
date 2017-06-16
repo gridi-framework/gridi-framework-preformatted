@@ -1,0 +1,15 @@
+pre {
+    display: block;
+    overflow: auto;
+    @include include-element-margin($pre-margin-top, $pre-margin-bottom, $pre-margin-left, $pre-margin-right, $pre-margin-for-screens);
+    border: $pre-border;
+    background: $pre-background;
+    padding: $pre-padding;
+    font-family: $pre-font-family;
+
+    code {
+        padding: 0;
+        background: transparent;
+        white-space: pre-wrap;
+    }
+}

@@ -1,0 +1,17 @@
+@mixin include-pre-colors($border-color, $background, $color) {
+    border-color: $border-color;
+    background: $background;
+    color: $color;
+}
+
+@mixin pre-colors($border-color, $background, $color) {
+    pre {
+        @include include-pre-colors($border-color, $background, $color);
+    }
+}
+
+@mixin class-pre-colors($class, $border-color, $background, $color) {
+    pre.#{$class} {
+        @include include-pre-colors($border-color, $background, $color);
+    }
+}
