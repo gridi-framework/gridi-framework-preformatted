@@ -1,11 +1,60 @@
 pre {
     display: block;
     overflow: auto;
-    @include include-element-margin($pre-margin-top, $pre-margin-bottom, $pre-margin-left, $pre-margin-right, $pre-margin-for-screens);
-    border: $pre-border;
-    background: $pre-background;
-    padding: $pre-padding;
+    @include margin-shorthand-with-screens-support((
+        top: $pre-margin-top,
+        bottom: $pre-margin-bottom,
+        left: $pre-margin-left,
+        right: $pre-margin-right
+    ), $pre-margin-for-screens);
+    @include border-shorthand((
+        border: (
+            width: $pre-border-width,
+            style: $pre-border-style,
+            color: $pre-border-color,
+            make-shorthand: true
+        ),
+        border-top: (
+            width: $pre-border-top-width,
+            style: $pre-border-top-style,
+            color: $pre-border-top-color,
+            make-shorthand: $pre-border-top-make-shorthand
+        ),
+        border-bottom: (
+            width: $pre-border-bottom-width,
+            style: $pre-border-bottom-style,
+            color: $pre-border-bottom-color,
+            make-shorthand: $pre-border-bottom-make-shorthand
+        ),
+        border-left: (
+            width: $pre-border-left-width,
+            style: $pre-border-left-style,
+            color: $pre-border-left-color,
+            make-shorthand: $pre-border-left-make-shorthand
+        ),
+        border-right: (
+            width: $pre-border-right-width,
+            style: $pre-border-right-style,
+            color: $pre-border-right-color,
+            make-shorthand: $pre-border-right-make-shorthand
+        )
+    ));
+    @include background-shorthand((
+        image: $pre-background-image,
+        position: $pre-background-position,
+        repeat: $pre-background-repeat,
+        color: $pre-background-color,
+        attachment: $pre-background-attachment,
+        make-shorthand: true
+    ));
+    @include padding-shorthand-with-screens-support((
+        top: $pre-padding-top, 
+        bottom: $pre-padding-bottom, 
+        left: $pre-padding-left, 
+        right: $pre-padding-right
+    ), $pre-padding-for-screens);
     font-family: $pre-font-family;
+    @include pre-extra-style();
 
     code {
         padding: 0;

@@ -1,9 +1,10 @@
+//Margins
 $pre-margin-top: $elements-margin-top !default;
 $pre-margin-bottom: $elements-margin-bottom !default;
 $pre-margin-left: $elements-margin-left !default;
 $pre-margin-right: $elements-margin-right !default;
 //Defined margins for each screens.
-$pre-margin-for-screens: () !default;
+$pre-margin-for-screens: $elements-margin-for-screens !default;
 /*$pre-margin-for-screens: (
     s1: (
         top: 20px, //Not required. Define only the margins values you want to change. Example - s2: ( top: 20px ) - change only top margin for screens greater than s2
@@ -14,7 +15,57 @@ $pre-margin-for-screens: () !default;
     ...
 ) !default;*/
 
-$pre-border: 1px solid get-color(grey, 400) !default;
-$pre-background: get-color(grey, 200) !default;
-$pre-padding: 10px !default;
+//Borders
+$pre-border-width: 1px !default;
+$pre-border-style: solid !default;
+$pre-border-color: get-color(grey, 400) !default;
+
+$pre-border-top-width: null !default;
+$pre-border-top-style: null !default;
+$pre-border-top-color: null !default;
+$pre-border-top-make-shorthand: false !default;
+
+$pre-border-bottom-width: null !default;
+$pre-border-bottom-style: null !default;
+$pre-border-bottom-color: null !default;
+$pre-border-bottom-make-shorthand: false !default;
+
+$pre-border-left-width: null !default;
+$pre-border-left-style: null !default;
+$pre-border-left-color: null !default;
+$pre-border-left-make-shorthand: false !default;
+
+$pre-border-right-width: null !default;
+$pre-border-right-style: null !default;
+$pre-border-right-color: null !default;
+$pre-border-right-make-shorthand: false !default;
+
+//Paddings
+$pre-padding-top: 10px !default;
+$pre-padding-bottom: 10px !default;
+$pre-padding-left: 10px !default;
+$pre-padding-right: 10px !default;
+//Defined paddings for each screens.
+$pre-padding-for-screens: () !default;
+/*$pre-padding-for-screens: (
+    s1: (
+        top: 20px, //Not required. Define only the paddings values you want to change. Example - s2: ( top: 20px ) - change only top padding for screens greater than s2
+        bottom: 20px,
+        left: 20px,
+        right: 20px,
+    ),
+    ...
+) !default;*/
+
+//Background
+$pre-background-image: null !default;
+$pre-background-position: null !default;
+$pre-background-repeat: null !default;
+$pre-background-color: get-color(grey, 200) !default;
+$pre-background-attachment: null !default;
+
+//Font
 $pre-font-family: $document-monospace-font-family !default;
+
+//Extra style
+@mixin pre-extra-style() {}
