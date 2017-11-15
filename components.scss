@@ -47,12 +47,12 @@ pre {
         attachment: $pre-background-attachment,
         make-shorthand: true
     ));
-    @include padding-shorthand-with-screens-support((
+    @include padding-shorthand((
         top: $pre-padding-top, 
         bottom: $pre-padding-bottom, 
         left: $pre-padding-left, 
         right: $pre-padding-right
-    ), $pre-padding-for-screens);
+    ));
     font-family: $pre-font-family;
     @include pre-extra-style();
 

@@ -45,17 +45,6 @@ $pre-padding-top: 10px !default;
 $pre-padding-bottom: 10px !default;
 $pre-padding-left: 10px !default;
 $pre-padding-right: 10px !default;
-//Defined paddings for each screens.
-$pre-padding-for-screens: () !default;
-/*$pre-padding-for-screens: (
-    s1: (
-        top: 20px, //Not required. Define only the paddings values you want to change. Example - s2: ( top: 20px ) - change only top padding for screens greater than s2
-        bottom: 20px,
-        left: 20px,
-        right: 20px,
-    ),
-    ...
-) !default;*/
 
 //Background
 $pre-background-image: null !default;

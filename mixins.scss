@@ -1,23 +1,24 @@
-@mixin include-pre-colors($colors-map) {
-    @if map-has-key($colors-map, border-color) and map-get($colors-map, border-color) {
-        border-color: map-get($colors-map, border-color);
-    }
-    @if map-has-key($colors-map, background) and map-get($colors-map, background) {
-        background: map-get($colors-map, background);
-    }
-    @if map-has-key($colors-map, color) and map-get($colors-map, color) {
-        color: map-get($colors-map, color);
-    }
+@mixin pre-extra-colors-propertys($colors-map) {}
+
+@mixin pre-colors-propertys($colors-map) {
+    @include property-from-map($colors-map, border-color);
+    @include property-from-map($colors-map, border-top-color);
+    @include property-from-map($colors-map, border-bottom-color);
+    @include property-from-map($colors-map, border-left-color);
+    @include property-from-map($colors-map, border-right-color);
+    @include property-from-map($colors-map, background-color);
+    @include property-from-map($colors-map, color);
+    @include pre-extra-colors-propertys();
 }
 
 @mixin pre-colors($colors-map) {
     pre {
-        @include include-pre-colors($colors-map);
+        @include pre-colors-propertys($colors-map);
     }
 }
 
 @mixin class-pre-colors($class, $colors-map) {
     pre.#{$class} {
-        @include include-pre-colors($colors-map);
+        @include pre-colors-propertys($colors-map);
     }
 }
