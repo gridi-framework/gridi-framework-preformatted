@@ -1,3 +1,6 @@
+$pre-display: block !default;
+$pre-overflow: auto !default;
+
 //Margins
 $pre-margin-top: $elements-margin-top !default;
 $pre-margin-bottom: $elements-margin-bottom !default;
@@ -31,10 +34,10 @@ $pre-border-right-color: null !default;
 $pre-border-right-make-shorthand: false !default;
 
 //Paddings
-$pre-padding-top: 10px !default;
-$pre-padding-bottom: 10px !default;
-$pre-padding-left: 10px !default;
-$pre-padding-right: 10px !default;
+$pre-padding-top: $inline-background-elements-padding-top !default;
+$pre-padding-bottom: $inline-background-elements-padding-bottom !default;
+$pre-padding-left: $inline-background-elements-padding-left !default;
+$pre-padding-right: $inline-background-elements-padding-right !default;
 
 //Background
 $pre-background-image: null !default;
@@ -45,6 +48,9 @@ $pre-background-attachment: null !default;
 
 //Font
 $pre-font-family: $document-monospace-font-family !default;
+
+//White space
+$pre-white-space: pre-wrap !default;
 
 //Extra style
 @mixin pre-extra-style() {}

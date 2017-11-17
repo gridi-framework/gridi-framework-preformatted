@@ -1,6 +1,6 @@
 pre {
-    display: block;
-    overflow: auto;
+    display: $pre-display;
+    overflow: $pre-overflow;
     @include margin-shorthand-with-screens-support((
         top: $pre-margin-top,
         bottom: $pre-margin-bottom,
@@ -54,6 +54,7 @@ pre {
         right: $pre-padding-right
     ));
     font-family: $pre-font-family;
+    white-space: $pre-white-space;
     @include pre-extra-style();
 
     code {
