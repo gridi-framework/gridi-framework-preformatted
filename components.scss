@@ -7,38 +7,14 @@ pre {
         left: $pre-margin-left,
         right: $pre-margin-right
     ), $pre-margin-for-screens);
-    @include border-shorthand((
+    @include border-shorthand(map-merge((
         border: (
             width: $pre-border-width,
             style: $pre-border-style,
             color: $pre-border-color,
             make-shorthand: true
-        ),
-        border-top: (
-            width: $pre-border-top-width,
-            style: $pre-border-top-style,
-            color: $pre-border-top-color,
-            make-shorthand: $pre-border-top-make-shorthand
-        ),
-        border-bottom: (
-            width: $pre-border-bottom-width,
-            style: $pre-border-bottom-style,
-            color: $pre-border-bottom-color,
-            make-shorthand: $pre-border-bottom-make-shorthand
-        ),
-        border-left: (
-            width: $pre-border-left-width,
-            style: $pre-border-left-style,
-            color: $pre-border-left-color,
-            make-shorthand: $pre-border-left-make-shorthand
-        ),
-        border-right: (
-            width: $pre-border-right-width,
-            style: $pre-border-right-style,
-            color: $pre-border-right-color,
-            make-shorthand: $pre-border-right-make-shorthand
         )
-    ));
+    ), $pre-borders));
     @include background-shorthand((
         image: $pre-background-image,
         position: $pre-background-position,

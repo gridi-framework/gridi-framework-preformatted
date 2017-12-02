@@ -12,26 +12,7 @@ $pre-margin-for-screens: $elements-margin-for-screens !default;
 $pre-border-width: 1px !default;
 $pre-border-style: solid !default;
 $pre-border-color: get-color(grey, 400) !default;
-
-$pre-border-top-width: null !default;
-$pre-border-top-style: null !default;
-$pre-border-top-color: null !default;
-$pre-border-top-make-shorthand: false !default;
-
-$pre-border-bottom-width: null !default;
-$pre-border-bottom-style: null !default;
-$pre-border-bottom-color: null !default;
-$pre-border-bottom-make-shorthand: false !default;
-
-$pre-border-left-width: null !default;
-$pre-border-left-style: null !default;
-$pre-border-left-color: null !default;
-$pre-border-left-make-shorthand: false !default;
-
-$pre-border-right-width: null !default;
-$pre-border-right-style: null !default;
-$pre-border-right-color: null !default;
-$pre-border-right-make-shorthand: false !default;
+$pre-borders: () !default;
 
 //Paddings
 $pre-padding-top: $inline-background-elements-padding-top !default;
