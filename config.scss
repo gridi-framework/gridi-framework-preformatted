@@ -34,4 +34,4 @@ $pre-font-family: $document-monospace-font-family !default;
 $pre-white-space: pre-wrap !default;
 
 //Extra style
-@mixin pre-extra-style() {}
+//@mixin pre-extra-style() {} //Create this mixin before import module when you want add some special style for element

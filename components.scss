@@ -31,7 +31,9 @@ pre {
     ));
     font-family: $pre-font-family;
     white-space: $pre-white-space;
-    @include pre-extra-style();
+    @if mixin-exists(pre-extra-style) {
+        @include pre-extra-style();
+    }
 
     code {
         padding: 0;
